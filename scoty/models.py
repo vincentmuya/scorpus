@@ -15,11 +15,12 @@ class NewForm(models.Model):
     Status=models.TextField(max_length = 50)
 
 
+
 class TrackForms(models.Model):
     ReferenceId =models.CharField(max_length = 30)
     Sender = models.CharField(max_length = 30)
     Reciever = models.CharField(max_length = 30)
-    newform = models.ForeignKey(NewForm,null = True, blank= True, on_delete = True)
+    newform = models.ForeignKey(NewForm)
     def __str__(self):
         return self.ReferenceId
 

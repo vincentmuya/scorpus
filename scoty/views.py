@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.http  import HttpResponse
 from . models import TrackForms
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def welcome(request):
     return render(request, 'all-scoots/index.html')
 
+@login_required(login_url='/accounts/login/')
 def search_results(request):
     
     if 'ReferenceId' in request.GET and request.GET["ReferenceId"]:
@@ -18,3 +20,5 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'all-scoots/search.html',{"message":message})
+def profile(request):
+    return render(request,'all-scoots/index.html')
