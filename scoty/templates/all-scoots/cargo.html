@@ -1,0 +1,48 @@
+
+{%load bootstrap3%}
+
+<h1>Cargo</h1>
+
+ <!-- Looping through cargo   -->
+    <p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Sender Name</th>
+            <th scope="col">Sender Address</th>
+            <th scope="col">Reciever Name</th>
+            <th scope="col">Reciever Address</th>
+            <th scope="col">referenceID</th>
+            <th scope="col">Goods are From</th>
+            <th scope="col">Goods To </th>
+            <th scope="col">Depature Date</th>
+            <th scope="col">Depature time</th>
+
+            <th scope="col">Goods Description</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        {%  for cargos_item in scoty %}
+        <tbody>
+          <tr>
+            <th scope="row">#</th>
+            <!--Display cargo transparent cargo  -->
+            <td></>{{cargos_item.SenderName}}</td>
+            <td>{{cargos_item.SenderAddress}}</td>
+            <td>{{cargos_item.RecieverName}}</td>
+            <td>{{cargos_item.RecieverAddress}}</td>
+            <td>{{cargos_item.referenceID}}</td>
+            <td>{{cargos_item.GoodsareFrom}}</td>
+            <td>{{cargos_item.GoodsTo}}</td>
+            <td>{{cargos_item.DepatureDate}}</td>
+            <td>{{cargos_item.Depaturetime}}</td>
+
+            <td>{{cargos_item.GoodsDescription}}</td>
+            <td>{{cargos_item.Status}}</td>
+          </tr>
+        </tbody>
+        {%endfor%}
+      </table>
+
+    </p>

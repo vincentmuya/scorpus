@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http  import HttpResponse
-from . models import TrackForms
+from . models import TrackForms,NewForm
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -9,7 +9,7 @@ def welcome(request):
 
 @login_required(login_url='/accounts/login/')
 def search_results(request):
-    
+
     if 'ReferenceId' in request.GET and request.GET["ReferenceId"]:
         search_term = request.GET.get("ReferenceId")
         searched_ref = Article.search_by_ReferenceId(search_term)
@@ -22,3 +22,8 @@ def search_results(request):
         return render(request, 'all-scoots/search.html',{"message":message})
 def profile(request):
     return render(request,'all-scoots/index.html')
+
+def cargo_list(request):
+    scoty = NewForm.objects.all()
+    print(scoty)
+    return render(request,'all-scoots/cargo.html',{"scoty":scoty})
