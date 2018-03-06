@@ -24,6 +24,9 @@ def search_results(request):
 def profile(request):
     return render(request,'all-scoots/index.html')
 
+def logout(request):
+    return render(request, 'all-scoots/index.html')
+
 def cargo_list(request):
     scoty = NewForm.objects.all()
     print(scoty)

@@ -139,13 +139,13 @@
           {% if user.is_authenticated %}
           <ul>
                 <li>
-                  <a href="{%url 'welcome'%}">Home</a>
+                <h3>  <a href="{%url 'welcome'%}">Home</a></h3>
                 </li>
                 <li>
-                  <a href="{%url 'new-cargo'%}">Add cargo</a>
+                  <h3><a href="{%url 'new-cargo'%}">Add cargo</a></h3>
                 </li>
                 <li>
-                  <a href="/logout">Logout</a>
+                  <h3><a href="/logout">Logout</a></h3>
                 </li>
           </ul>
           {% else %}
