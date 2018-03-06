@@ -1,1 +1,1 @@
-web: gunicorn scotty.wsgi
+web: gunicorn scoty.wsgi
