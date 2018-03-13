@@ -1,5 +1,15 @@
 {%extends 'all-scoots/base.html'%}
 {% block content %}
+<head>
+  <style media="screen">
+    li{
+      font-size: 20px;
+    }
+    .card{
+      text-align: center;
+    }
+  </style>
+</head>
 <div class="container">
 
   <div class="row">
@@ -15,10 +25,26 @@
 
   {% if referenceID %}
     {% for result in referenceID%}
-      <div class="col-sm-6 col-md-3">
-          <h1>ReferenceId:{{result.referenceID}}</h1>
-          <h1>ArrivalDate:{{result.ArrivalDate}}</h1>
-      </div>
+    <div class="card" style="width: 200rem;">
+  <div class="card-header">
+    <h1>Cargo Details</h1>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Sender Name:{{result.SenderName}}</li>
+    <li class="list-group-item">Sender Address:{{result.SenderAddress}}</li>
+    <li class="list-group-item">Reciever Name:{{result.RecieverName}}</li>
+    <li class="list-group-item">Reciever Address:{{result.RecieverAddress}}</li>
+    <li class="list-group-item">ReferenceId:{{result.referenceID}}</li>
+    <li class="list-group-item">Goods are From:{{result.GoodsareFrom}}</li>
+    <li class="list-group-item">Goods To:{{result.GoodsTo}}</li>
+    <li class="list-group-item">Depature Date:{{result.DepatureDate}}</li>
+    <li class="list-group-item">Depature time:{{result.Depaturetime}}</li>
+    <li class="list-group-item">Arrival Date:{{result.ArrivalDate}}</li>
+    <li class="list-group-item">Arrival Time:{{result.ArrivalTime}}</li>
+    <li class="list-group-item">Goods Description:{{result.GoodsDescription}}</li>
+    <li class="list-group-item">Status:{{result.Status}}</li>
+  </ul>
+</div>
     {% endfor %}
   {% endif %}
   </div>

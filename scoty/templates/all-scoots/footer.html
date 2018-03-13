@@ -1,92 +1,173 @@
-<div class="container">
+<style media="screen">
+/* f. Footer section */
+.footer{
+padding: 60px 0;
+  width: 100%;
+  background: #313131;
+  color: #fff;
+}
+.footer-title{
+position: relative;
+  color: #fff;
+font-size: 24px;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #4e4e4e;
+}
+.footer-title:after{
+position: absolute;
+content: '';
+left: 0;
+bottom: 0;
+width: 30px;
+height: 4px;
+background: #ff304d;
+}
+.footer-links a{
+padding: 10px 0;
+border-bottom: 1px solid #404040;
+color: #fff;
+display: block;
+transition: color 0.5s ease-in-out;
+}
+.footer-links a:hover{
+color: #ff304d;
+}
+.footer-social-links li{
+display: inline-block;
+}
+.footer-social-links a{
+width: 40px;
+height: 40px;
+font-size: 16px;
+float: left;
+margin-right: 10px;
+padding: 10px;
+border: 1px solid #404040;
+border-radius: 50px;
+text-align: center;
+color: #fff;
+line-height: 1;
+-webkit-transition: background 0.3s ease-in-out;
+-moz-transition: background 0.3s ease-in-out;
+transition: background 0.3s ease-in-out;
+}
+.footer-social-links a:hover{
+background: #ff304d;
+}
+/* g. Footer bottom section */
+.footer-bottom{
+width: 100%;
+padding: 25px 0;
+text-align: center;
+color: #fff;
+background: #222222;
+}
+</style>
+<!-- Include the above in your HEAD tag  -->
 
-<!--Footer-->
-<footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
+<div class="container-fluid">
+	<div class="row">
+    	<div class="col-md-12">
+    	    <footer class="footer">
+		<div class="container">
+			<div class="row">
+        <div class="col-md-3 m-b-30">
+					<div class="footer-title m-t-5 m-b-20 p-b-8">
+						Contact Info
+					</div>
+					<div class="footer-links">
+            <h6 class="text-uppercase mb-4 font-weight-bold" id ="contact">Contact</h6>
+            <p><i class="fa fa-home mr-3"></i> Kilimani Rd opposite Adlife</p>
+      <p><i class="fa fa-envelope mr-3"></i>info@scorpus.co.ke</p>
+      <p><i class="fa fa-phone mr-3"></i> +254(0) 712345678</p>
+      <!-- <p><i class="fa fa-print mr-3"></i>  + 254 710 143 397</p> -->
+					</div>
+				</div>
+				<div class="col-md-6 m-b-30">
+					<div class="footer-title m-t-5 m-b-20 p-b-8">
+						About us
+					</div>
+					<p class="white-text" id='about'>
+            Scorpus Cargo Logistics is your first company choice for all your Freight and Cargo Logistics requirements and makes business flow. As one of the world’s leading non-asset- based supply chain management companies, we design and implement industry-leading
+              solutions in both freight management and contract logistics. Trans Continental Logistics cargo applies its renowned operational expertise to provide best-in-class services across its integrated worldwide network, where our focus is equally on general
+              business and the specialist needs of the automotive, consumer & retail, energy, healthcare, industrial & aerospace and technology sectors. We are based in Kenya with a very strong presence and clientelle in East and Central Africa.
 
-  <!--Footer Links-->
-  <div class="container text-center text-md-left">
-
-    <!-- Footer links -->
-    <div class="row text-center text-md-left mt-3 pb-3">
-
-      <!--First column-->
-      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h4 class="text-uppercase mb-4 font-weight-bold">Scorpus</h4>
-      </div>
-      <!--/.First column-->
-
-      <hr class="w-100 clearfix d-md-none">
-
-      <!--Second column-->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold">Our Services</h6>
-        <p><a href="#!">Air Services</a></p>
-        <p><a href="#!">Water Services</a></p>
-        <p><a href="#!">Land Services</a></p>
-      </div>
-      <!--/.Second column-->
-
-      <hr class="w-100 clearfix d-md-none">
-
-      <!--Third column-->
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold" id ="contact">Contact</h6>
-        <p><i class="fa fa-home mr-3"></i> Kilimani Rd opposite Adlife</p>
-        <p><i class="fa fa-envelope mr-3"></i> info@scorpus.co.ke</p>
-        <p><i class="fa fa-phone mr-3"></i> + 254 710 143 397</p>
-      </div>
-
-      </div>
-
-      <hr class="w-100 clearfix d-md-none">
-
-
-      <!--/.Fourth column-->
-      <!-- <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-      <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-      <p><a href="#!">Your Account</a></p>
-      <p><a href="#!">Become an Affiliate</a></p>
-      <p><a href="#!">Shipping Rates</a></p>
-      <p><a href="#!">Help</a></p> -->
-
-    </div>
-    <!-- Footer links -->
-
-    <hr>
-
-    <div class="row py-3 d-flex align-items-center">
-
-      <!--Grid column-->
-      <div class="col-md-8 col-lg-8">
-
-        <!--Copyright-->
-        <p class="text-center text-md-left grey-text">© 2018 Copyright:<strong> CLOUD TISA</strong></p>
-        <!--/.Copyright-->
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-md-4 col-lg-4 ml-lg-0">
-
-        <!--Social buttons-->
-        <div class="text-center text-md-right">
-          <ul class="list-unstyled list-inline">
-            <li class="list-inline-item"><a class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fa fa-facebook"></i></a></li>
-            <li class="list-inline-item"><a class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fa fa-google-plus"></i></a></li>
-            <li class="list-inline-item"><a class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-        <!--/.Social buttons-->
-
-      </div>
-      <!--Grid column-->
-
-    </div>
-
-  </div>
-
-</footer>
-<!--/.Footer-->
+					</p>
+				</div>
+				<!-- <div class="col-md-3 m-b-30">
+					<div class="footer-title m-t-5 m-b-20 p-b-8">
+						Quick Links
+					</div>
+					<div class="footer-links">
+						<a href="#">
+							Blog
+						</a>
+						<a href="#">
+							FAQ
+						</a>
+						<a href="#">
+							Help Desk
+						</a>
+						<a href="#">
+							Free wordpress themes
+						</a>
+						<a href="#">
+							Terms & conditions
+						</a>
+						<a href="#">
+							Privacy policy
+						</a>
+					</div>
+				</div> -->
+				<!-- <div class="col-md-3 m-b-30">
+					<div class="footer-title m-t-5 m-b-20 p-b-8">
+						Support
+					</div>
+					<div class="footer-links">
+						<a href="#">
+							Affiliate
+						</a>
+						<a href="#">
+							Login
+						</a>
+						<a href="#">
+							All theme package
+						</a>
+						<a href="#">
+							Support forum
+						</a>
+						<a href="#">
+							Free sales enquiry
+						</a>
+					</div>
+					<div class="footer-social-links m-t-30">
+						<li>
+							<a href="#">
+								<i class="fa fa-facebook" aria-hidden="true"></i>
+							</a>
+							<a href="#">
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+							</a>
+							<a href="#">
+								<i class="fa fa-linkedin" aria-hidden="true"></i>
+							</a>
+							<a href="#">
+								<i class="fa fa-youtube" aria-hidden="true"></i>
+							</a>
+							<a href="#">
+								<i class="fa fa-google-plus" aria-hidden="true"></i>
+							</a>
+						</li>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</footer>
+	<div class="footer-bottom">
+		<!-- Vincent Muya ©  2018 -->
+	</div>
+    	</div>
+	</div>
 </div>

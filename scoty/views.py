@@ -8,7 +8,7 @@ from .forms import NewNewFormForm
 def welcome(request):
     return render(request, 'all-scoots/index.html')
 
-@login_required(login_url='/accounts/login/')
+
 def search_results(request):
 
     if 'referenceID' in request.GET and request.GET["referenceID"]:
