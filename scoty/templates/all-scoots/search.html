@@ -1,23 +1,23 @@
-
-
+{%extends 'all-scoots/base.html'%}
 {% block content %}
 <div class="container">
 
   <div class="row">
-    {% if ReferenceIds%}
-      <h2>Found {{ ReferenceIds|length }} of searched term {{message}}</h2>
+    {% if referenceID%}
+      <h2>Found {{ referenceID|length }} of searched term {{message}}</h2>
     {% else %}
-      <h2> Found 0 ReferenceIds for the search term {{message}}</h2>
+      <h2> Found 0 referenceID for the search term {{message}}</h2>
     {% endif %}
 
   </div>
 
   <div class="row">
 
-  {% if ReferenceIds %}
-    {% for ReferenceId in ReferenceIds %}
+  {% if referenceID %}
+    {% for result in referenceID%}
       <div class="col-sm-6 col-md-3">
-          <h1>{{ReferenceId.Sender}}</h1>
+          <h1>ReferenceId:{{result.referenceID}}</h1>
+          <h1>ArrivalDate:{{result.ArrivalDate}}</h1>
       </div>
     {% endfor %}
   {% endif %}

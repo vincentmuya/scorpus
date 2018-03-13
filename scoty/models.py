@@ -15,7 +15,10 @@ class NewForm(models.Model):
     GoodsDescription=models.TextField(max_length = 50)
     Status=models.TextField(max_length = 50)
 
-
+    @classmethod
+    def search_by_referenceID(cls,search_term):
+        results = cls.objects.filter(referenceID__icontains=search_term)
+        return results
 
 
 class TrackForms(models.Model):
@@ -29,10 +32,6 @@ class TrackForms(models.Model):
 
     def save_track(self):
         self.save()
-    @classmethod
-    def search_by_title(cls,search_term):
-        scooty = cls.objects.filter(ReferenceId__icontains=search_term)
-        return scooty
 
     @classmethod
     def cargo_list(cls):

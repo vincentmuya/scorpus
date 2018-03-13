@@ -1,6 +1,6 @@
 
 {%load bootstrap3%}
-
+  <button type="button" class="btn"><a href="{%url 'welcome'%}">Home</a></button>
 <h1>Cargo</h1>
 
  <!-- Looping through cargo   -->
@@ -40,6 +40,7 @@
 
             <td>{{cargos_item.GoodsDescription}}</td>
             <td>{{cargos_item.Status}}</td>
+
           </tr>
         </tbody>
         {%endfor%}
