@@ -9,12 +9,20 @@
 <body>
   <div class="container">
   <button type="button" class="btn"><a href="{%url 'welcome'%}">Home</a></button>
-    <form method="post">
-        {% csrf_token %} {% bootstrap_form form%}
+  <div class="w3-card-4">
 
+<header class="w3-container w3-blue">
+  <h1>Login</h1>
+</header>
 
-        <button type="submit"> login </button>
-    </form>
+<div class="container">
+  <form method="post">
+      {% csrf_token %} {% bootstrap_form form%}
+      <button type="submit" class="btn btn-primary"> Login </button>
+  </form>
+</div>
+
+</div>
   </div>
 </body>
 </html>
