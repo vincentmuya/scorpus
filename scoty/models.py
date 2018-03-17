@@ -15,6 +15,9 @@ class NewForm(models.Model):
     GoodsDescription=models.TextField(max_length = 50)
     Status=models.TextField(max_length = 50)
 
+    def __str__(self):
+        return self.referenceID
+
     @classmethod
     def search_by_referenceID(cls,search_term):
         results = cls.objects.filter(referenceID__icontains=search_term)
