@@ -7,6 +7,7 @@
     }
     .card{
       text-align: center;
+      background: url('/static/Scorpuslogo.png'); 
     }
     body{
       background-image: url('');
@@ -30,22 +31,22 @@
     {% for result in referenceID%}
     <div class="card" style="width: 200rem;">
   <div class="card-header">
-    <h1>Cargo Details</h1>
+    <h1><strong></strong>Cargo Details</strong></h1>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Sender Name:{{result.SenderName}}</li>
-    <li class="list-group-item">Sender Address:{{result.SenderAddress}}</li>
-    <li class="list-group-item">Reciever Name:{{result.RecieverName}}</li>
-    <li class="list-group-item">Reciever Address:{{result.RecieverAddress}}</li>
-    <li class="list-group-item">ReferenceId:{{result.referenceID}}</li>
-    <li class="list-group-item">Goods are From:{{result.GoodsareFrom}}</li>
-    <li class="list-group-item">Goods To:{{result.GoodsTo}}</li>
-    <li class="list-group-item">Depature Date:{{result.DepatureDate}}</li>
-    <li class="list-group-item">Depature time:{{result.Depaturetime}}</li>
-    <li class="list-group-item">Arrival Date:{{result.ArrivalDate}}</li>
-    <li class="list-group-item">Arrival Time:{{result.ArrivalTime}}</li>
-    <li class="list-group-item">Goods Description:{{result.GoodsDescription}}</li>
-    <li class="list-group-item">Status:{{result.Status}}</li>
+    <li class="list-group-item"><h1>Sender Name</h1>:{{result.SenderName}}</li>
+    <li class="list-group-item"><h1>Sender Address</h1>:{{result.SenderAddress}}</li>
+    <li class="list-group-item"><h1>Reciever Name</h1>:{{result.RecieverName}}</li>
+    <li class="list-group-item"><h1>Reciever Address</h1>:{{result.RecieverAddress}}</li>
+    <li class="list-group-item"><h1>ReferenceId</h1>:{{result.referenceID}}</li>
+    <li class="list-group-item"><h1>Goods are From</h1>:{{result.GoodsareFrom}}</li>
+    <li class="list-group-item"><h1>Goods To</h1>:{{result.GoodsTo}}</li>
+    <li class="list-group-item"><h1>Depature Date</h1>:{{result.DepatureDate}}</li>
+    <li class="list-group-item"><h1>Depature time</h1>:{{result.Depaturetime}}</li>
+    <li class="list-group-item"><h1>Arrival Date</h1>:{{result.ArrivalDate}}</li>
+    <li class="list-group-item"><h1>Arrival Time</h1>:{{result.ArrivalTime}}</li>
+    <li class="list-group-item"><h1>Goods Description</h1>:{{result.GoodsDescription}}</li>
+    <li class="list-group-item"><h1>Status</h1>:{{result.Status}}</li>
   </ul>
 </div>
     {% endfor %}
