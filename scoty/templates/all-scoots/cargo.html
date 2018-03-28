@@ -1,9 +1,14 @@
 
-{%load bootstrap4%} {%block content%}
+{% load bootstrap4 %} {% load staticfiles %}
+<head>
+  {%block styles%}
+{% bootstrap_css%}
+{%endblock%}
+</head>
 <body>
-
-  <button type="button" class="btn"><a href="{%url 'welcome'%}">Home</a></button>
-<h1>Cargo</h1>
+  {% include 'all-scoots/navbar2.html' %}
+{%block content%}
+<h1>Cargo List</h1>
 
  <!-- Looping through cargo   -->
 
@@ -47,10 +52,11 @@
         </tbody>
 
         {%endfor%}
-        {%endblock%}
       </table>
+      {%endblock%}
     </body>
       <style media="screen">
+
       body{
         background-image: url('http://137.219.mwp.accessdomain.com/wp-content/uploads/2017/11/7151782029_7ce29b7ef2_b.jpg');
         background-repeat: no-repeat;
@@ -66,5 +72,14 @@
       {
       padding: 5px;
       border: 5px solid black;
+      }
+      h1{
+        color: white;
+      }
+      th{
+        color: white;
+      }
+      td{
+        color: white;
       }
       </style>

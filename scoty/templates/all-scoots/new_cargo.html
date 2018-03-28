@@ -20,10 +20,9 @@
   }
 </style>
 </head>
-
+{% include 'all-scoots/navbar2.html' %}
 <body>
   <div class="container">
-    <button type="button" class="btn"><a href="{%url 'welcome'%}">Home</a></button>
   <form  action="{%url 'new-cargo'%}" method="post" enctype="multipart/form-data">
     {%csrf_token%}
 
