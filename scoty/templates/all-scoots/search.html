@@ -7,13 +7,18 @@
     }
     .card{
       text-align: center;
-      background: url('/static/Scorpuslogo.png'); 
     }
     body{
-      background-image: url('');
+      background-image: url('https://www.cargos.com/wp-content/uploads/2015/04/Cargo-Containers.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    h2{
+      color: white;
     }
   </style>
 </head>
+<body>
 <div class="container">
 
   <div class="row">
@@ -22,7 +27,6 @@
     {% else %}
       <h2> Found 0 referenceID for the search term {{message}}</h2>
     {% endif %}
-
   </div>
 
   <div class="row">
@@ -32,7 +36,7 @@
     <div class="card" style="width: 200rem;">
   <div class="card-header">
     <h1><strong></strong>Cargo Details</strong></h1>
-  </div>
+
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><h1>Sender Name</h1>:{{result.SenderName}}</li>
     <li class="list-group-item"><h1>Sender Address</h1>:{{result.SenderAddress}}</li>
@@ -49,8 +53,10 @@
     <li class="list-group-item"><h1>Status</h1>:{{result.Status}}</li>
   </ul>
 </div>
+  </div>
     {% endfor %}
   {% endif %}
   </div>
 </div>
+</body>
 {% endblock %}
