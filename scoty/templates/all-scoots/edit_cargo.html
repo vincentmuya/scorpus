@@ -1,0 +1,18 @@
+{% load bootstrap4 %} {% load staticfiles %}
+<head>
+  {%block styles%}
+{% bootstrap_css%}
+{%endblock%}
+</head>
+<body>
+  {% include 'all-scoots/navbar2.html' %}
+{%block content%}
+<h1>Edit Cargo</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <li class="list-group-item">{{ cargo_form.as_p }}</li>
+  <button type="submit" class="btn btn-info">Save changes</button>
+</form>
+
+
+</body>
