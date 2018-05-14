@@ -13,7 +13,7 @@ class NewForm(models.Model):
     ArrivalDate=models.CharField(max_length = 30)
     ArrivalTime=models.CharField(max_length = 30)
     GoodsDescription=models.TextField(max_length = 1000)
-    Status=models.TextField(max_length = 50)
+    Status=models.TextField(max_length = 5000)
 
     def __str__(self):
         return self.referenceID
