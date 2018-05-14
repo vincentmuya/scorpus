@@ -12,7 +12,7 @@ class NewForm(models.Model):
     Depaturetime=models.CharField(max_length = 30)
     ArrivalDate=models.CharField(max_length = 30)
     ArrivalTime=models.CharField(max_length = 30)
-    GoodsDescription=models.TextField(max_length = 50)
+    GoodsDescription=models.TextField(max_length = 1000)
     Status=models.TextField(max_length = 50)
 
     def __str__(self):
