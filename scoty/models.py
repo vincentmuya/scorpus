@@ -25,9 +25,9 @@ class NewForm(models.Model):
 
 
 class TrackForms(models.Model):
-    ReferenceId =models.CharField(max_length = 30)
-    Sender = models.CharField(max_length = 30)
-    Reciever = models.CharField(max_length = 30)
+    ReferenceId =models.CharField(max_length = 250)
+    Sender = models.CharField(max_length = 250)
+    Reciever = models.CharField(max_length = 250)
     newform = models.ForeignKey(NewForm,on_delete=models.CASCADE)
     def __str__(self):
         return self.ReferenceId
