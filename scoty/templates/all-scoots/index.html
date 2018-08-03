@@ -2,10 +2,10 @@
 
 <head>
   <style media="screen">
-    ul {
+    ul.service{
       margin-top: 0;
       margin-bottom: 1rem;
-      list-style-type: none;
+      list-style-type: circle;
     }
     h3{
       font-size: 20px;
@@ -21,21 +21,28 @@
 </head>
 <section id="hero" class="hero-section section">
   <div class="hero-text container">
-    <hr>
     <div class="hero-text-table-cell text-center">
       <div class="hero-top-text">
-        <h2>Welcome to Scorpus Cargo Logistics.</h2>
-        <h3>Our services</h3>
+        <h1>Our services</h1>
       </div>
       <div class="hero-middle-text">
-        <ul class="text-rotator" data-interval="5000">
-          <li>PACKING SERVICES</li>
-          <li>CUSTOMS CLEARANCE </li>
-          <li>WAREHOUSE SERVICES</li>
-          <li>ONLINE SHIPMENT TRACKING</li>
-          <li>INTERNATIONAL FREIGHT SERVICES</li>
-          <li>LAND TRANSPORTATION AND DELIVERY</li>
-          <li>THIRD PARTY LOGISTICS AND DISTRIBUTION</li>
+        <ul class="service" data-interval="5000">
+          <div class="row">
+            <div class="col-md-4">
+              <li>INTERNATIONAL FREIGHT SERVICES</li>
+              <li>LAND TRANSPORTATION AND DELIVERY</li>
+              <li>THIRD PARTY LOGISTICS AND DISTRIBUTION</li>
+            </div>
+            <div class="col-md-4">
+              <li>WAREHOUSE SERVICES</li>
+              <li>ONLINE SHIPMENT TRACKING</li>
+            </div>
+            <div class="col-md-4">
+              <li>PACKING SERVICES</li>
+              <li>CUSTOMS CLEARANCE </li>
+            </div>
+          </div>
+
         </ul>
       </div>
     </div>
@@ -43,7 +50,6 @@
 </section>
 <!-- <header id="header" class="header-section section navbar navbar-default header-floating" role="navigation">
       </header> -->
-      <hr>
 <!-- Air card -->
 <div class="container">
   <div class="row">
