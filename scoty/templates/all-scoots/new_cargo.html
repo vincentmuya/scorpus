@@ -1,4 +1,4 @@
-{% load bootstrap4 %} {% load staticfiles %}
+{%extends 'all-scoots/base.html'%} {% load bootstrap4 %} {% load staticfiles %} {%block content%}
 <!DOCTYPE html>
 <html>
 
@@ -8,19 +8,13 @@
   <title>New Cargo</title>
   {{form.media}}
 
-{% block styles %} {% bootstrap_css %}
-  <link rel="stylesheet" href="{% static 'css/news.css' %}"> {% endblock %}
+
 <style media="screen">
   body{
-    background-image: url('' );
-
-    background-position: center;
-
-
+margin-top: 80px;
   }
 </style>
 </head>
-{% include 'all-scoots/navbar2.html' %}
 <body>
   <div class="container">
   <form  action="{%url 'new-cargo'%}" method="post" enctype="multipart/form-data">
@@ -30,11 +24,6 @@
     <input type="submit" class="btn btn-success btn-lg" value="Post">
   </form>
   </div>
-
-  {% block scripts %}
- <script type="text/javascript" src="{%static 'js/newcargo.js'%}"></script>
-{% endblock %}
-
 </body>
-
 </html>
+{% endblock %}

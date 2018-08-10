@@ -3,12 +3,13 @@
 <head>
   <style media="screen">
     li{
-      font-size: 20px;
+      font-size: 25px;
     }
     .card{
       text-align: center;
     }
     body{
+      margin-top: 60px;
       background-image: url('https://www.cargos.com/wp-content/uploads/2015/04/Cargo-Containers.jpg');
       background-repeat: no-repeat;
       background-size: cover;
@@ -33,26 +34,26 @@
 
   {% if referenceID %}
     {% for result in referenceID%}
-    <div class="card" style="width: 200rem;">
+    <div class="card" style="width: 100rem;">
   <div class="card-header">
-    <h1><strong></strong>Cargo Details</strong></h1>
-
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><h1>Sender Name</h1>:{{result.SenderName}}</li>
-    <li class="list-group-item"><h1>Sender Address</h1>:{{result.SenderAddress}}</li>
-    <li class="list-group-item"><h1>Reciever Name</h1>:{{result.RecieverName}}</li>
-    <li class="list-group-item"><h1>Reciever Address</h1>:{{result.RecieverAddress}}</li>
-    <li class="list-group-item"><h1>ReferenceId</h1>:{{result.referenceID}}</li>
-    <li class="list-group-item"><h1>Goods are From</h1>:{{result.GoodsareFrom}}</li>
-    <li class="list-group-item"><h1>Goods To</h1>:{{result.GoodsTo}}</li>
-    <li class="list-group-item"><h1>Depature Date</h1>:{{result.DepatureDate}}</li>
-    <li class="list-group-item"><h1>Depature time</h1>:{{result.Depaturetime}}</li>
-    <li class="list-group-item"><h1>Arrival Date</h1>:{{result.ArrivalDate}}</li>
-    <li class="list-group-item"><h1>Arrival Time</h1>:{{result.ArrivalTime}}</li>
-    <li class="list-group-item"><h1>Goods Description</h1>:{{result.GoodsDescription}}</li>
-    <li class="list-group-item"><h1>Status</h1>:{{result.Status}}</li>
-  </ul>
+    <strong><h2>Cargo Details</h2></strong>
 </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><strong>Sender Name</strong> :{{result.SenderName}}</li>
+    <li class="list-group-item"><strong>Sender Address</strong> :{{result.SenderAddress}}</li>
+    <li class="list-group-item"><strong>Reciever Name</strong> :{{result.RecieverName}}</li>
+    <li class="list-group-item"><strong>Reciever Address</strong> :{{result.RecieverAddress}}</li>
+    <li class="list-group-item"><strong>ReferenceId</strong> :{{result.referenceID}}</li>
+    <li class="list-group-item"><strong>Goods are From</strong> :{{result.GoodsareFrom}}</li>
+    <li class="list-group-item"><strong>Goods To</strong> :{{result.GoodsTo}}</li>
+    <li class="list-group-item"><strong>Depature Date</strong> :{{result.DepatureDate}}</li>
+    <li class="list-group-item"><strong>Depature time</strong> :{{result.Depaturetime}}</li>
+    <li class="list-group-item"><strong>Arrival Date</strong> :{{result.ArrivalDate}}</li>
+    <li class="list-group-item"><strong>Arrival Time</strong> :{{result.ArrivalTime}}</li>
+    <li class="list-group-item"><strong>Goods Description</strong> :{{result.GoodsDescription}}</li>
+    <li class="list-group-item"><strong>Status</strong> :{{result.Status}}</li>
+  </ul>
+
   </div>
     {% endfor %}
   {% endif %}

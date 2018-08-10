@@ -1,127 +1,174 @@
-<head>
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-</head>
+{% load bootstrap3 %}
 
-<style media="screen">
-  @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-  h1{
-    font-family: 'Gotham-Bold';
-    font-weight: 900;
-  }
-  h3{
-    font-family: 'Gramond Regular';
-  }
-  header {
-    background: url('/static/Scorpuslogo.png');
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 400px;
-    background-color: white;
-    color: #fff;
-    text-align: center;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
-  }
-  button{
-    width: 90px;
-    height: 33px;
-  }
-  input{
-    right: 5px;
-  }
-  ul {
-  list-style-type: none;
-}
-a{
-  color: white;
-}
-  .header {
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    background: rgba(0, 0, 0, 0.3) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC');
-    -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-  }
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-  .tabStrip {
-    background: #f3eee9;
-    border: none;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .grey {
-    background: grey;
-  }
-
-  .tabStrip ul li a {
-    color: #fff;
-  }
-
-  .tabStrip ul li a:hover {
-    border: none;
-    background: none;
-  }
-</style>
-
-<header>
-  <div class="container header inner">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-header">
-        <ul>
-          <li><h1>Scorpus Cargo Logistics</h1></li>
-        </ul>
-        </div>
-
-        <!-- <div class="collapse navbar-collapse" id="myNavbar"> -->
-        <ul class="nav navbar-nav navbar-right masthead-nav">
-          <form class="navbar-form" role="search" action="{% url 'search_results' %}" style="width:289px">
-
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search referenceid" name="referenceID">
-              <div class="input-group-btn">
-                <button class="btn btn-primary" ><h2>Search</h2></button>
-              </div>
+<!--
+more ui & layout https://github.com/alphadsy
+contribute on github : https://github.com/alphadsy/alpha-ui
+-->
+<nav class="navbar navbar-default navbar-doublerow navbar-trans navbar-fixed-top">
+  <!-- top nav -->
+  <nav class="navbar navbar-top hidden-xs">
+    <div class="container">
+      <!-- left nav top -->
+      <ul class="nav navbar-nav pull-left">
+        <li><a href="#"><span class="text-black">QUESTIONS? CALL: <b>+254(0) 710 143 397</b></span></a></li>
+      </ul>
+      <!-- right nav top -->
+      <ul class="nav navbar-nav pull-right">
+        <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search referenceid" name="referenceID">
+            <div class="input-group-btn">
+              <button class="btn btn-primary" >Search</button>
             </div>
+          </div>
 
-          </form>
-          {% if user.is_authenticated %}
-          <ul>
-                <li>
-                <h3>  <a href="{%url 'welcome'%}">Home</a></h3>
-                </li>
-                <li>
-                  <h3><a href="{%url 'new-cargo'%}">Add cargo</a></h3>
-                </li>
-                <li>
-                  <h3><a href="{%url 'cargo'%}">Cargo List</a></h3>
-                </li>
-                <li>
-                  <h3><a href="/logout">Logout</a></h3>
-                </li>
-          </ul>
-          {% else %}
-          <!-- <li>
-            <a class='btn btn-default' href="/accounts/login"></a>
-          </li> -->
-
-          {% endif %}
+        </form>
+      </ul>
+    </div>
+    <div class="dividline light-grey"></div>
+  </nav>
+  <!-- down nav -->
+  <nav class="navbar navbar-down">
+    <div class="container">
+      <div class="flex-container">
+        <div class="navbar-header flex-item">
+          <div class="navbar-brand" ><a href="/#home">Scorpus Cargo Logistics<span class="glyphicon glyphicon-home"></a></span></div>
+        </div>
+        <ul class="nav navbar-nav flex-item hidden-xs">
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#contact">Contact</a></li>
         </ul>
-        <!-- </div> -->
+        <ul class="nav navbar-nav flex-item hidden-xs pull-right">
+          <li></li>
+        </ul>
+        <!-- dropdown only moblie -->
+          <div class="dropdown visible-xs pull-right">
+            <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search referenceid" name="referenceID">
+                <div class="input-group-btn">
+                  <button class="btn btn-primary" >Search</button>
+                </div>
+              </div>
+
+            </form>
+            <button class="btn btn-default dropdown-toggle " type="button" id="dropdownmenu" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-align-justify"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
-  </div>
-</header>
+  </nav>
+<!--bg img  -->
+<style media="screen">
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    margin-left: 240px;
+}
+/*scroll effect*/
+.navbar-trans {
+/*background-color: #e6e6e6;*/
+border: none;
+transition: top 1s ease;
+}
+a{
+  color: black;
+}
+/*double row*/
+.navbar-doublerow > .navbar{
+display: block;
+padding: 0px auto;
+margin: -4px auto;
+min-height: 25px;
+}
+.navbar-doublerow .nav{
+padding: 1px auto;
+}
+.navbar-doublerow .dividline{
+margin: 5px 100px;
+padding-top: 1px;
+background-color: inherit;
+}
+/*top nav*/
+.navbar-doublerow .navbar-top ul>li>a {
+padding: 8px auto;
+font-size: 12px;
+}
+/*down nav*/
+.navbar-doublerow .navbar-down .navbar-brand {
+padding: 0px auto;
+float: left;
+color: black;
+font-size: 15px;
+}
+.navbar-doublerow .navbar-down ul>li>a{
+  right: 60px;
+font-size: 15px;
+color: black;
+transition: border-bottom .2s ease-in , transform .2s ease-in-out;
+}
+.navbar-doublerow .navbar-down ul>li>a:hover{
+border-bottom: 1px solid #fff;
+color: #fff;
+}
+.navbar-doublerow .navbar-down .dropdown{
+  padding: 5px;
+  color: #000;
+}
+.navbar-doublerow .navbar-down .dropdown ul>li>a,
+.navbar-doublerow .navbar-down .dropdown ul>li>a:hover{
+color: #000;
+border-bottom: none;
+}
+.navbar-doublerow.navbar-trans.afterscroll {
+}
+.navbar-doublerow.navbar-trans.afterscroll {
+ top:-50px;
+}
 
-</div>
-<div class="container-fluid tabStrip">
-  <ul class="nav nav-tabs text-center">
-    <li class="col-sm-3 grey"><a href="/#about"><i class="fa fa-commenting fa-2x col-sm-12"></i><span class="col-sm-12">About us</span></a></li>
-    <li class="col-sm-3 grey"><a  href="/#contact"><i class="fa fa-drivers-license-o fa-2x col-sm-12"></i><span class="col-sm-12">Contact</span></a></li>
-    <li class="col-sm-3 grey"><a href="{%url 'welcome'%}"><i class="fa fa-home fa-2x col-sm-12"></i><span class="col-sm-12">Home</span></a></li>
-    <li class="col-sm-3 grey"><a href="/accounts/login"><i class="fa fa-sign-in fa-2x col-sm-12"></i><span class="col-sm-12">Admin Sign in</span></a></li>
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-item {
+}
+/*text*/
+.text-black,.text-black-hover:hover{color:black!important}
+/*fontcolor*/
+.light-grey {color:#000!important;background-color:#E6E9ED!important}
 
-  </ul>
-</div>
+</style>
+{% block scripts %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   {% bootstrap_javascript %}
+   <script>
+   // toggle class scroll
+   $(window).scroll(function() {
+       if($(this).scrollTop() > 50)
+       {
+           $('.navbar-trans').addClass('afterscroll');
+       } else
+       {
+           $('.navbar-trans').removeClass('afterscroll');
+       }
+
+   });
+
+   // demo only
+   // open link in new tab without ugly target="_blank"
+   $("a[href^='http']").attr("target", "_blank");
+
+</script>
+  {% endblock %}
