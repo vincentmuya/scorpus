@@ -7,13 +7,13 @@
     {% if user.is_authenticated %}
     <ul>
           <li>
-            <h3><a href="{%url 'new-cargo'%}">Add cargo</a></h3>
+            <a href="{%url 'new-cargo'%}">Add cargo</a>
           </li>
           <li>
-            <h3><a href="{%url 'cargo'%}">Cargo List</a></h3>
+            <a href="{%url 'cargo'%}">Cargo List</a>
           </li>
           <li>
-            <h3><a href="/logout">Logout</a></h3>
+            <a href="/logout">Logout</a>
           </li>
     </ul>
     {% else %}
@@ -113,7 +113,7 @@ ul, li{
 }
 .top-right {
     position: absolute;
-    top: 90px;
+    top: 110px;
     right: 16px;
 }
   ul.service{
@@ -131,6 +131,9 @@ ul, li{
     font-size: 13px;
   }
   @media screen and (max-width: 650px) {
+    .header{
+      height: 300px;
+    }
     h1{
       font-size: 15px;
     }
