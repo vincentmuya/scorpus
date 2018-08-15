@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="container">
-  <button type="button" class="btn"><a href="{%url 'welcome'%}">Home</a></button>
+  {% include 'all-scoots/navbar.html' %}
   <div class="w3-card-4">
 
 <header class="w3-container w3-blue">
@@ -26,3 +26,8 @@
   </div>
 </body>
 </html>
+<style media="screen">
+body{
+  margin-top: 80px;
+}
+</style>
