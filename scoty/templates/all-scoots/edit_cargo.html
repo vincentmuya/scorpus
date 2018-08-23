@@ -1,18 +1,19 @@
-{% load bootstrap4 %} {% load staticfiles %}
-<head>
-  {%block styles%}
-{% bootstrap_css%}
-{%endblock%}
-</head>
-<body>
-  {% include 'all-scoots/navbar2.html' %}
-{%block content%}
-<h1>Edit Cargo</h1>
-<form method="post" enctype="multipart/form-data">
-  {% csrf_token %}
-  <li class="list-group-item">{{ cargo_form.as_p }}</li>
-  <button type="submit" class="btn btn-info">Save changes</button>
-</form>
+{% load bootstrap3 %} {% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
 
+    <h1>update</h1>
+    <form action="{%url 'edit-cargo'%}" method="post" enctype="multipart/form-data">
+      {%csrf_token%}
 
-</body>
+      {% bootstrap_form form%}
+      <button type="submit">Save changes</button>
+    </form>
+  </body>
+</html>
+{% endblock %}

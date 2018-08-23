@@ -3,7 +3,7 @@ from django.http  import HttpResponse
 from .models import TrackForms,NewForm
 from django.contrib.auth.decorators import login_required
 from .forms import NewNewFormForm
-
+from django.db import transaction
 # Create your views here.
 def welcome(request):
     return render(request, 'all-scoots/index.html')
@@ -43,3 +43,14 @@ def new_cargo(request):
     else:
         form = NewNewFormForm()
     return render(request, 'all-scoots/new_cargo.html', {"form": form})
+
+@transaction.atomic
+def edit_cargo(request):
+    if request.method =='POST':
+        form=NewNewFormForm(request.POST, request.FILES, instance=request.NewNewFormForm)
+        if form.is_valid():
+            form.save()
+            return redirect('all-scoots/cargo.html')
+    else:
+        form = NewNewFormForm(request.POST, request.FILES)
+        return render(request, 'all-scoots/edit_cargo.html', {"form": form})
