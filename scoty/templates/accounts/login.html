@@ -16,10 +16,12 @@
 </header>
 
 <div class="container">
+  <div class="card">
   <form method="post">
       {% csrf_token %} {% bootstrap_form form%}
       <button type="submit" class="btn btn-primary"> Login </button>
   </form>
+  </div>
 </div>
 
 </div>
@@ -29,5 +31,25 @@
 <style media="screen">
 body{
   margin-top: 80px;
+}
+body{
+  background-image: url('https://4esnok.by/wp-content/uploads/2018/07/KLLmy-Truck-Ship-Plane-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card{
+  margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: white;
+     height: 200px;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+h1{
+  color: white;
+}
+@media screen and (max-width: 650px) {
+
 }
 </style>
