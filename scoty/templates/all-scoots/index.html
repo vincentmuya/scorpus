@@ -27,14 +27,14 @@
     <img src="static/Scorpuslogo.png" class="header" style="width:100%">
 </header>
 <div class="container">
-<h2 class="hero-text-table-cell text-center">About Us</h2>
+<h1 class="hero-text-table-cell text-center">About Us</h1>
   <p>Scorpus Cargo Logistics is your first company choice for all your Freight and Cargo Logistics requirements and makes business flow. As one of the world’s leading non-asset- based supply chain management companies, we design and implement industry-leading
   solutions in both freight management and contract logistics. Trans Continental Logistics cargo applies its renowned operational expertise to provide best-in-class services across its integrated worldwide network, where our focus is equally
   on general business and the specialist needs of the automotive, consumer & retail, energy, healthcare, industrial & aerospace and technology sectors. We are based in Kenya with a very strong presence and clientelle in East and Central
   Africa.</p>
   <div class="hero-text container">
       <div class="hero-top-text">
-        <h2 class="hero-text-table-cell text-center">Our services</h2>
+        <h1 class="hero-text-table-cell text-center">Our services</h1>
       </div>
         <ul class="service" data-interval="5000">
           <div class="row">
@@ -104,6 +104,9 @@ header {
 a{
   color: black;
 }
+h1{
+  font-weight: 600;
+}
 p{
   /*font-weight: 400;*/
   font-size: 16px;
@@ -114,8 +117,9 @@ ul, li,p{
 }
 .top-right {
     position: absolute;
-    top: 90px;
+    top: 50px;
     right: 16px;
+    font-size: 16px;
 }
   ul.service{
     margin-top: 0;
@@ -125,13 +129,16 @@ ul, li,p{
   .card-block{
     background: rgba(0, 0, 0, 0.3) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC');
     -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 5);
+  }
+  .card-title{
+    text-align: center;
   }
   .tint{
     background: linear-gradient(
     rgba(0, 0, 0, .6),
     rgba(0, 0, 0, .1)),
-    url("/static/images/tint.jpg") 40% / cover fixed;
+    url("https://4esnok.by/wp-content/uploads/2018/07/KLLmy-Truck-Ship-Plane-1.jpg") 40% / cover fixed;
   height: 100%;
   width: 100%;
   padding: 1.5em;
@@ -141,8 +148,8 @@ ul, li,p{
     .header{
       height: 300px;
     }
-    h2{
-      font-size: 20px;
+    h1{
+      font-size: 23px;
     }
     li, p{
       font-size: 12px;

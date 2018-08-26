@@ -6,20 +6,18 @@
 
 <nav class="navbar navbar-default navbar-doublerow navbar-trans navbar-fixed-top">
   <!-- top nav -->
-  <nav class="navbar navbar-top hidden-xs">
-    <div class="container">
+  <!-- <nav class="navbar navbar-top hidden-xs">
+    <div class="container"> -->
       <!-- left nav top -->
-      <ul class="nav navbar-nav pull-left">
+      <!-- <ul class="nav navbar-nav pull-left"> -->
         <!-- <li><a href="#"><span class="text-black">QUESTIONS? CALL: <b>+*** *** *** ***</b></span></a></li> -->
-      </ul>
+      <!-- </ul> -->
       <!-- right nav top -->
-      <ul class="nav navbar-nav pull-right">
-<p></p>
-<br>
-      </ul>
+      <!-- <ul class="nav navbar-nav pull-right"> -->
+      <!-- </ul>
     </div>
     <div class="dividline light-grey"></div>
-  </nav>
+  </nav> -->
   <!-- down nav -->
   <nav class="navbar navbar-down">
     <div class="container">
@@ -151,20 +149,20 @@ border-bottom: none;
    {% bootstrap_javascript %}
    <script>
    // toggle class scroll
-   $(window).scroll(function() {
-       if($(this).scrollTop() > 50)
-       {
-           $('.navbar-trans').addClass('afterscroll');
-       } else
-       {
-           $('.navbar-trans').removeClass('afterscroll');
-       }
-
-   });
-
-   // demo only
-   // open link in new tab without ugly target="_blank"
-   $("a[href^='http']").attr("target", "_blank");
+  //  $(window).scroll(function() {
+  //      if($(this).scrollTop() > 50)
+  //      {
+  //          $('.navbar-trans').addClass('afterscroll');
+  //      } else
+  //      {
+  //          $('.navbar-trans').removeClass('afterscroll');
+  //      }
+   //
+  //  });
+   //
+  //  // demo only
+  //  // open link in new tab without ugly target="_blank"
+  //  $("a[href^='http']").attr("target", "_blank");
 
 </script>
   {% endblock %}
