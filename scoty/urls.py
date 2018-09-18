@@ -8,6 +8,5 @@ urlpatterns=[
     url(r'^login/$', login,{'template_name':'accounts/login.html'}),
     url(r'^cargo/', views.cargo_list, name = 'cargo'),
     url(r'^new/cargo$', views.new_cargo, name='new-cargo'),
-    url(r'^edit/cargo$', views.edit_cargo, name='edit-cargo'),
 
 ]

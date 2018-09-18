@@ -1,7 +1,7 @@
-{%extends 'all-scoots/base.html'%}
-{% block content %}
-<head>
+{%extends 'all-scoots/base.html'%} {% load bootstrap4 %} {% load staticfiles %} {%block content%}
 
+<head>
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
 </head>
 <body>
 <div class="container">
@@ -44,40 +44,4 @@
   <!-- </div> -->
 </div>
 </body>
-<style media="screen">
-  li{
-    font-size: 16px;
-  }
-  .card{
-    text-align: center;
-  }
-  body{
-    margin-top: 60px;
-    background-image: url('https://www.cargos.com/wp-content/uploads/2015/04/Cargo-Containers.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  h2{
-    color: white;
-    font-weight: 400;
-  }
-  @media screen and (max-width: 650px) {
-    li{
-      font-size: 12px;
-    }
-    body{
-      margin-top: 60px;
-      background-image: url('https://www.cargos.com/wp-content/uploads/2015/04/Cargo-Containers.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .card{
-      text-align: left;
-      width: 100%;
-    }
-    h2{
-      font-size: 20px;
-    }
-  }
-</style>
 {% endblock %}

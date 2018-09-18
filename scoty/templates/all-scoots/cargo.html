@@ -1,7 +1,7 @@
 
 {%extends 'all-scoots/base.html'%} {% load bootstrap4 %} {% load staticfiles %} {%block content%}
 <head>
-
+<link rel="stylesheet" href="{% static 'css/cargo.css' %}">
 </head>
 <body>
 <h1>Cargo List</h1>
@@ -50,31 +50,4 @@
       </table>
 
     </body>
-      <style media="screen">
-
-      body{
-          margin-top: 80px;
-      }
-      table
-      {
-      border-collapse: collapse;
-      border-spacing: 0px;
-      }
-      table, th, td
-      {
-      padding: 5px;
-      border: 5px solid black;
-      }
-      h1{
-        color: black;
-        text-align: center;
-      }
-      th{
-        color: black;
-      }
-      td{
-        color: black;
-        font-size: 15px
-      }
-      </style>
 {%endblock%}
