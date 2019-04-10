@@ -26,6 +26,7 @@ def profile(request):
 def logout(request):
     return render(request, 'all-scoots/index.html')
 
+@login_required(login_url='/accounts/login/')
 def cargo_list(request):
     scoty = NewForm.objects.all()
     print(scoty)
