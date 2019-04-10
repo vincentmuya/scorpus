@@ -1,5 +1,6 @@
 {%extends 'all-scoots/base.html'%} {% load bootstrap4 %} {% load staticfiles %} {%block content%}
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
 
@@ -15,6 +16,18 @@
 <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
 <link rel="stylesheet" href="{% static 'css/aos.css' %}">
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+<script src="{% static 'js/jquery-ui.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+<script src="{% static 'js/aos.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 </head>
 <!-- <header id="home">
   <div class="top-right">
@@ -70,6 +83,7 @@
   </div>
   </div> -->
 
+<body>
 
   <div class="site-blocks-cover overlay" style="background-image: url(static/Scorpuslogo.png);" data-aos="fade" data-stellar-background-ratio="0.5">
   <div class="container">
@@ -272,5 +286,9 @@
     </div>
   </div>
 </div>
+
+</body>
+
+</html>
 {% include 'all-scoots/footer.html' %}
 {%endblock%}
