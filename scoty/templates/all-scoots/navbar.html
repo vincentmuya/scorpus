@@ -40,31 +40,22 @@
           <nav class="site-navigation position-relative text-right" role="navigation">
 
             <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+              <li><form class="navbar-form" role="search" action="{% url 'search_results' %}">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search referenceid" name="referenceID">
+                  <div class="input-group-btn">
+                    <button class="btn btn-primary" >Search</button>
+                  </div>
+                </div>
+
+              </form></li>
               <li class="active"><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
-              <li class="has-children">
-                <a href="services.html">Services</a>
-                <ul class="dropdown">
-                  <li><a href="#">Air Freight</a></li>
-                  <li><a href="#">Ocean Freight</a></li>
-                  <li><a href="#">Ground Shipping</a></li>
-                  <li><a href="#">Warehousing</a></li>
-                  <li><a href="#">Storage</a></li>
-                </ul>
-              </li>
+              <li><a href="services.html">Services</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
         </div>
-        <form class="navbar-form" role="search" action="{% url 'search_results' %}">
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search referenceid" name="referenceID">
-                        <div class="input-group-btn">
-                          <button class="btn btn-primary" >Search</button>
-                        </div>
-                      </div>
-
-                    </form>
 
         <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
