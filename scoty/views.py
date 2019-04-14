@@ -50,4 +50,4 @@ def update_cargo(request, pk):
     if form.is_valid():
         form.save()
         return redirect('/')
-    return render(request, 'update_cargo.html', {'form': form})
+    return render(request, 'all-scoots/update_cargo.html', {'form': form})
