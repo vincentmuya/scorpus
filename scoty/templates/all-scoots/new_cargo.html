@@ -3,27 +3,76 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>New Cargo</title>
-  {{form.media}}
-
-
-<style media="screen">
-  body{
-margin-top: 80px;
-  }
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
   <div class="container">
-  <form  action="{%url 'new-cargo'%}" method="post" enctype="multipart/form-data">
-    {%csrf_token%}
+    <div class="row">
+      <div class="col-md-1">
 
-    {% bootstrap_form form%}
-    <input type="submit" class="btn btn-success btn-lg" value="Post">
-  </form>
-  </div>
+      </div>
+      <div class="col-md-10">
+
+<form  action="{%url 'new-cargo'%}" method="post" enctype="multipart/form-data">
+  {%csrf_token%}
+   <table border="1">
+  {% bootstrap_form form%}
+</table>
+  <input type="submit" class="btn btn-success btn-lg" value="Post">
+</form>
+</div>
+
+<div class="col-md-1">
+
+</div>
+</div>
+</div>
 </body>
 </html>
+{%include 'all-scoots/footer.html'%}
+<style media="screen">
+body{
+padding-top: 5%;
+background-color: white;
+color: black;
+}
+.form-group {
+  margin-bottom: 0px;
+  width: 400px;
+  margin-left: 10px;
+  display: inline-block;
+}
+textarea.form-control {
+  height: 100px;
+  padding: 0px;
+}
+.skybrand{
+  font-weight: 600;
+  font-size: 40px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+</style>
 {% endblock %}
