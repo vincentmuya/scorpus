@@ -55,7 +55,7 @@
             <td>{{cargos_item.SenderAddress}}</td>
             <td>{{cargos_item.RecieverName}}</td>
             <td>{{cargos_item.RecieverAddress}}</td>
-            <td><a href=""><button type="button" name="button">Edit</button></a></td>
+            <td><a href="{% url 'update-cargo' cargos_item.pk %}"><button type="button" name="button">Edit</button></a></td>
           </tr>
           {%endfor%}
         </table>

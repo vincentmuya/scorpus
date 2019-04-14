@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect, get_object_or_404
 from django.http  import HttpResponse
 from .models import TrackForms,NewForm
 from django.contrib.auth.decorators import login_required
@@ -43,3 +43,11 @@ def new_cargo(request):
     else:
         form = NewNewFormForm()
     return render(request, 'all-scoots/new_cargo.html', {"form": form})
+
+def update_cargo(request, pk):
+    instance = get_object_or_404(NewForm, pk=pk)
+    form = NewNewFormForm(request.POST or None, instance=instance)
+    if form.is_valid():
+        form.save()
+        return redirect('/')
+    return render(request, 'update_cargo.html', {'form': form})
