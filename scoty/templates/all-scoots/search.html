@@ -1,47 +1,211 @@
 {%extends 'all-scoots/base.html'%} {% load bootstrap4 %} {% load staticfiles %} {%block content%}
 
 <head>
-<link rel="stylesheet" href="{% static 'css/search.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
-<div class="container">
+  <div class="container" id="container">
 
-  <div class="row">
-    {% if referenceID%}
-      <h2>Found {{ referenceID|length }} of searched term {{message}}</h2>
-    {% else %}
-      <h2> Found 0 referenceID for the search term {{message}}</h2>
-    {% endif %}
+    <!-- <div class="row"> -->
+  <div class="resul">
+    <h1 class="trackresult"><span style="color:blue">Tracking Car</span><span style="color:orange">go Results</span></h1>
   </div>
-
-  <!-- <div class="row"> -->
-
-  {% if referenceID %}
-    {% for result in referenceID%}
-    <div class="card" >
-  <div class="card-header">
-    <strong><h2>Cargo Details</h2></strong>
-</div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><strong>Sender Name</strong> :{{result.SenderName}}</li>
-    <li class="list-group-item"><strong>Sender Address</strong> :{{result.SenderAddress}}</li>
-    <li class="list-group-item"><strong>Reciever Name</strong> :{{result.RecieverName}}</li>
-    <li class="list-group-item"><strong>Reciever Address</strong> :{{result.RecieverAddress}}</li>
-    <li class="list-group-item"><strong>ReferenceId</strong> :{{result.referenceID}}</li>
-    <li class="list-group-item"><strong>Goods are From</strong> :{{result.GoodsareFrom}}</li>
-    <li class="list-group-item"><strong>Goods To</strong> :{{result.GoodsTo}}</li>
-    <li class="list-group-item"><strong>Depature Date</strong> :{{result.DepatureDate}}</li>
-    <li class="list-group-item"><strong>Depature time</strong> :{{result.Depaturetime}}</li>
-    <li class="list-group-item"><strong>Arrival Date</strong> :{{result.ArrivalDate}}</li>
-    <li class="list-group-item"><strong>Arrival Time</strong> :{{result.ArrivalTime}}</li>
-    <li class="list-group-item"><strong>Goods Description</strong> :{{result.GoodsDescription}}</li>
-    <li class="list-group-item"><strong>Status</strong> :{{result.Status}}</li>
-  </ul>
-
-  </div>
-    {% endfor %}
+  {% if referenceID%}
+    <h2></h2>
+  {% else %}
+    <h1 class="found0"> Found 0 TrackNo {{message}}</h1>
+    <img class="foundimg" src="http://2.bp.blogspot.com/-Eh7StN6_XdE/U9dBUtxWWII/AAAAAAAAA4o/65LhDDxi-SQ/s1600/questions.jpg" alt="">
   {% endif %}
-  <!-- </div> -->
-</div>
-</body>
-{% endblock %}
+    {% if referenceID %}
+      {% for result in referenceID%}
+      <div class="row">
+        <div class="col-md-1">
+    <h1></h1>
+        </div>
+        <div class="col-md-10">
+    <div class="panel panel-default">
+      <div class="panel-heading"><strong>ReferenceID:</strong> {{result.referenceID}}   <img src="http://qrcode.kaywa.com/img.php?s=8&d=Certified%20Post%20Whore%21" class="qrcode" alt="Qr code"></div>
+      <br>
+  <div class="track-card" >
+    <div class="row">
+      <div class="col-md-6">
+        <div class="credentials">
+        <h2 class="titlebold">Sender Name:</h2>
+        <p>{{result.SenderName}}</p>
+        <h2 class="senderadd"><strong>SenderAddress:</strong></h2>
+        <p>{{result.SenderAddress}}</p>
+      </div>
+
+      </div>
+    <div class="col-md-6">
+      <div class="credentials">
+      <h2 class="titlebold">Receiver Name:</h2>
+      <p>{{result.RecieverName}}</p>
+      <h2 class="receiveradd"><strong>ReceiverAddress:</strong> </h2>
+      <p>{{result.RecieverAddress}}</p>
+      </div>
+    </div>
+    </div>
+    <br>
+    <table id="customers">
+    <tr>
+      <td><strong>Origin: </strong><br>{{result.GoodsareFrom}}</td>
+      <td><strong>Destination: </strong><br>{{result.GoodsTo}}</td>
+    </tr>
+    <tr>
+      <td><strong>Depature Date: </strong><br>{{result.DepatureDate}}</td>
+      <td><strong>Depature time: </strong><br>{{result.Depaturetime}}</td>
+    </tr>
+    <tr>
+      <td><strong>Arrival Date: </strong><br>{{result.ArrivalDate}}</td>
+      <td><strong>Arrival Time: </strong><br>{{result.ArrivalTime}}</td>
+    </tr>
+    </table>
+  </div>
+  </div>
+  <td bgcolor="#790000"colspan="4" class="blink"><strong>Status:</strong> <blink style="color:red;">>>>>>{{result.Status}}<<<<<<<br /></blink></td>
+  </div>
+  <div class="col-md-1">
+  <h1></h1>
+  </div>
+  </div>
+      {% endfor %}
+    {% endif %}
+    </div>
+  </body>
+  {%include 'all-scoots/footer.html'%}
+  <style media="screen">
+  #container{height: 100vh;}
+  .found0{
+    text-align: center;
+  }
+  .foundimg{
+    width: 80%;
+    height: 75%;
+    margin-left: 10%;
+  }
+  h1{
+    font-size: 40px;
+  }
+  .titlebold{
+    font-weight: 600;
+    font-size: 30px;
+  }
+  .receiveradd,.senderadd{
+    font-size: 20px;
+  }
+  .panel{
+    width: 100%;
+  }
+  .trackresult{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: center;
+    font-size: 45px;
+    color: black;
+  }
+  .qrcode{
+    width: 40px;
+    height: 30px;
+  }
+  .track-card{
+    width: 60rem;
+  }
+  #customers {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+          width: 95.8%;
+  }
+
+  #customers td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      width: 110px;
+  }
+
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+  #customers tr:hover {background-color: #ddd;}
+  #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+  }
+  .credentials{
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px;
+    padding: 2%;
+    margin-left: 10%;
+    width: 60%;
+  }
+  .credentials h1{
+    font-size: 40px;
+  }
+  footer{
+        background-color: #4a4a4a;
+  }
+  .row{
+  	margin-left: 0px;
+  	margin-right: 0px;
+  }
+  body{
+    padding-top: 5%;
+    background-color: white;
+    color: black;
+    max-width: 100%;
+  }
+  @media screen and (max-width: 650px) {
+    .track-card{
+      width: 21rem;
+    }
+    .panel{
+      margin-bottom: 0px;
+    }
+    .titlebold{
+      font-weight: 900;
+      font-size: 15px;
+    }
+    #customers{
+      width: 300px;
+    }
+
+    .senderadd, .receiveradd{
+      font-size: 15px;
+    }
+  .shipment-result{
+      font-size: 25px;
+    }
+    .credentials h1 {
+        font-size: 15px;
+    }
+    body{
+      padding-top: 17%;
+    }
+  }
+  </style>
+  {% endblock %}
