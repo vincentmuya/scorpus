@@ -1,53 +1,170 @@
 
 {%extends 'all-scoots/base.html'%} {% load bootstrap4 %} {% load staticfiles %} {%block content%}
 <head>
-<link rel="stylesheet" href="{% static 'css/cargo.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
-<h1>Cargo List</h1>
-
-<a href="https://scorpus1.herokuapp.com/admin/scoty/newform/"><button type="button" name="button" class="btn btn-secondary">Edit/Update Cargo</button></a>
-<!-- Looping through cargo   -->
-      <table class="table table-striped">
-        <thead>
+  <div id="container" class="container">
+    <h1 class="cargoheading"><span style="color:blue">Cargo</span> <span style="color:orange">List</span></h1>
+    <div class="sidenav">
+    <h3 span style="text-align:center">Menu</h3>
+  <a href="https://scorpus1.herokuapp.com/admin/scoty/newform/"><span class="glyphicon glyphicon-pencil">Edit/Delete Cargo</a>
+  <a href="{%url 'new-cargo'%}"><span class="glyphicon glyphicon-plus"></span>  Add Cargo</a>
+  <a href="/logout"><span class="glyphicon glyphicon-log-out"></span>  Log out</a>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+  <div class="col-md-11">
+  <table id="customers">
+  <tr>
+  <th>Reference ID</th>
+  <th>Sender Name</th>
+  <th>Sender Address</th>
+  <th>Receiver Name</th>
+  <th>Receiver Address</th>
+  </tr>
+          <!-- Looping through cargo   -->
+          {%  for cargos_item in scoty %}
           <tr>
-            <!-- <th scope="col">#</th> -->
-            <th scope="col">Sender Name</th>
-            <th scope="col">Sender Address</th>
-            <th scope="col">Reciever Name</th>
-            <th scope="col">Reciever Address</th>
-            <th scope="col">referenceID</th>
-            <th scope="col">Goods are From</th>
-            <th scope="col">Goods To </th>
-            <th scope="col">Depature Date</th>
-            <th scope="col">Depature time</th>
-
-            <th scope="col">Goods Description</th>
-            <th scope="col">Status</th>
-          </tr>
-        </thead>
-        {%  for cargos_item in scoty %}
-        <tbody>
-          <tr>
-            <!-- <th scope="row">#</th> -->
-            <!--Display cargo transparent cargo  -->
+            <td>{{cargos_item.referenceID}}</td>
             <td>{{cargos_item.SenderName}}</td>
             <td>{{cargos_item.SenderAddress}}</td>
             <td>{{cargos_item.RecieverName}}</td>
             <td>{{cargos_item.RecieverAddress}}</td>
-            <td>{{cargos_item.referenceID}}</td>
-            <td>{{cargos_item.GoodsareFrom}}</td>
-            <td>{{cargos_item.GoodsTo}}</td>
-            <td>{{cargos_item.DepatureDate}}</td>
-            <td>{{cargos_item.Depaturetime}}</td>
-            <td>{{cargos_item.GoodsDescription}}</td>
-            <td>{{cargos_item.Status}}</td>
-
+            <td><a href=""><button type="button" name="button">Edit</button></a></td>
           </tr>
-        </tbody>
+          {%endfor%}
+        </table>
+        </div>
+        </div>
+        </div>
+      </body>
+      {%include 'all-scoots/footer.html'%}
+      </html>
+      <!--==============================footer=================================-->
 
-        {%endfor%}
-      </table>
+      <style media="screen">
+      .cargoheading{
+        font-size: 45px;
+        text-align: center;
+      	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+      #admin{
+        background-color: orange;
+      }
+      #customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-    </body>
-{%endblock%}
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+  #customers tr:hover {background-color: #ddd;}
+
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: blue;
+    color: white;
+  }
+      body{
+        height: 100%;
+        padding-top: 5%;
+        background-color: white;
+        color: black;
+      }
+      #container{height: 100vh;}
+      p{
+        color: black;
+      }
+        .row{
+        	margin-left: 0px;
+        	margin-right: 0px;
+        }
+        table{
+          border-collapse: collapse;
+        }
+        .skybrand{
+            font-weight: 600;
+            font-size: 40px;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+        .sidenav {
+        width: 190px;
+        position: fixed;
+        z-index: 1;
+        top: 20px;
+        left: 10px;
+        background: #eee;
+        overflow-x: hidden;
+        padding: 8px 0;
+        margin-top: 8%;
+      }
+
+      .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #2196F3;
+        display: block;
+      }
+
+      .sidenav a:hover {
+        color: #064579;
+      }
+        @media screen and (max-width: 650px) {
+        body{
+          padding-top: 17%;
+        }
+        .sidenav {
+        width: 120px;
+        position: fixed;
+        z-index: 1;
+        top: 80px;
+        left: 10px;
+        background: #eee;
+        overflow-x: hidden;
+        padding: 8px 0;
+        margin-top: 8%;
+        }
+        #customers{
+          margin-left: 100px;
+        }
+      }
+      @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+      </style>
+  {%endblock%}
