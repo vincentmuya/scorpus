@@ -83,11 +83,11 @@
       <td><strong>Arrival Date: </strong><br>{{result.ArrivalDate}}</td>
       <td><strong>Arrival Time: </strong><br>{{result.ArrivalTime}}</td>
     </tr>
-    <td><strong>Description: </strong><br>{{result.GoodsDescription}}</td>
     </table>
-    <td bgcolor="#790000"colspan="4" class="blink"><strong style="font-size:15px;,font-weight:200;">Status:</strong> <blink style="color:red;,font-size:30px;">>>>>>{{result.Status}}<<<<<<<br /></blink></td>
+    <td><strong>Description: </strong><br>{{result.GoodsDescription}}</td>
   </div>
   </div>
+  <td bgcolor="#790000"colspan="4" class="blink"><strong>Status:</strong> <blink style="color:red;">>>>>>{{result.Status}}<<<<<<<br /></blink></td>
   </div>
   <div class="col-md-1">
   <h1></h1>
@@ -110,9 +110,6 @@
   }
   h1{
     font-size: 40px;
-  }
-  strong{
-    font-weight: 900;
   }
   .titlebold{
     font-weight: 600;
@@ -147,7 +144,7 @@
       border: 1px solid #ddd;
       padding: 8px;
       width: 110px;
-      font-size: 15px;
+      font-size: 15px
   }
 
   #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -170,9 +167,6 @@
   .credentials h1{
     font-size: 40px;
   }
-  .credentials p{
-    font-size: 18px;
-  }
   footer{
         background-color: #4a4a4a;
   }
@@ -185,9 +179,6 @@
     background-color: white;
     color: black;
     /*max-width: 100%;*/
-  }
-  .blink{
-    font-size: 18px;
   }
   @media screen and (max-width: 650px) {
     .track-card{
