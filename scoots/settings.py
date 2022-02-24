@@ -36,7 +36,6 @@ LOGIN_REDIRECT_URL ='/'
 
 INSTALLED_APPS = [
     'scoty',
-    'bootstrap3',
     'bootstrap4',
     'tinymce',
     'django.contrib.admin',
@@ -134,4 +133,4 @@ STATICFILES_DIRS = [
 os.path.join(BASE_DIR, "static"),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
